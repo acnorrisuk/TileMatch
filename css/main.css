@@ -146,10 +146,7 @@ nav a:hover {
    ========================================================================== */
 
 #memory_board {
-    background: #ccc;
-    border: 1px solid #999;
     width: 80%;
-    height: 800px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -164,7 +161,22 @@ nav a:hover {
     padding: 20px;
     cursor: pointer;
     text-align: center;
-    background: #6655cc;
+    background-color: white;
+    background-image: -webkit-linear-gradient(0deg, rgba(200, 0, 0, .5) 50%, transparent 50%), -webkit-linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 50%);
+    background-image: linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 50%), linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 50%);
+    background-size: 50px 50px;
+}
+
+.clicked {
+    background: #fff !important;
+}
+
+#score {
+    clear: both;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    padding: 10px;
 }
 /* ==========================================================================
    Media Queries
