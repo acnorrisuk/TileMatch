@@ -145,9 +145,14 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
-#board {
-    width: 80%;
+#container {
     margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+#board {
+    max-width: 800px;
     padding: 20px;
     -webkit-perspective: 1000;
     perspective: 1000;
@@ -162,15 +167,15 @@ nav a:hover {
 }
 
 #score {
+    padding: 20px;
     clear: both;
     text-align: center;
     font-size: 1.5em;
     font-family: sans-serif;
-    padding: 10px;
 }
 
-.matched {
-    display: hidden;
+img {
+    margin: 10px;
 }
 /* CSS for flipping */
 
@@ -178,13 +183,7 @@ nav a:hover {
     -webkit-perspective: 1000;
     -o-perspective: 1000;
     perspective: 1000;
-    border: 1px solid #ccc;
 }
-/*.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}*/
 
 .flip-container,
 .front,
@@ -228,6 +227,7 @@ nav a:hover {
 .back {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    border: 1px solid #CCC;
 }
 
 .transform {
