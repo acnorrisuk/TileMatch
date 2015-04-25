@@ -56,11 +56,13 @@ $(function () {
                 </div>\
             </div>");
         }
+        console.log(tile_values);
     };
     newBoard();
 
     // check if tiles match using a temporary array
     $(".tile").on("click", function () {
+        console.log("clicked");
         // if tile hasn't been clicked already
         if (temp_values.length < 2 && !$(this).hasClass("transform")) {
             $(this).addClass("transform");
@@ -80,7 +82,13 @@ $(function () {
                     // end game condition
                     if (tiles_flipped === tile_values.length) {
                         setTimeout(function () {
-                            $("#dialog").dialog();
+                            $("#dialog").dialog({
+                                modal: true,
+                                close: function () {
+                                    console.log("complete")
+                                    newBoard();
+                                }
+                            });
                         }, 1000)
                     }
                 } else {
@@ -98,13 +106,4 @@ $(function () {
 
     }); // end of on click
 
-    $("button").on("click", function () {
-        console.log("clicked");
-        newBoard();
-    });
 }); // end of JQuery function
-
-
-/* Improvements
-
-Add modal for winning.*/
