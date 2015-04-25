@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
@@ -26,19 +27,21 @@
     <div id="container">
         <h1>Memory Match</h1>
         <p>Click on the tiles to match the pictures</p>
+        <div id="dialog" title="">
+            <p>Congratulations. You Win!.</p>
+        </div>
         <div id="board">
             <!-- JS content generated here -->
         </div>
         <div id="score"></div>
+
     </div>
-
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
     </script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="js/main.js"></script>
 
 

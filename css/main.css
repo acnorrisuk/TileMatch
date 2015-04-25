@@ -156,6 +156,7 @@ nav a:hover {
     padding: 20px;
     -webkit-perspective: 1000;
     perspective: 1000;
+    margin: 0 auto;
 }
 
 #board > div {
@@ -176,6 +177,10 @@ nav a:hover {
 
 img {
     margin: 10px;
+}
+
+#dialog {
+    display: none;
 }
 /* CSS for flipping */
 

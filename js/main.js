@@ -3,8 +3,8 @@ $(function () {
     // to store tile values
     var tile_values = [
         "img/bicycle28.svg", 'img/bicycle28.svg',
-        'img/flower11.svg', 'img/flower11.svg',
-        'img/sharks.svg', 'img/sharks.svg',
+        'img/flower11.svg', 'img/flower11.svg'
+/*        'img/sharks.svg', 'img/sharks.svg',
         'img/umbrellas4.svg', 'img/umbrellas4.svg',
         'img/houses2.svg', 'img/houses2.svg',
         'img/drink151.svg', 'img/drink151.svg',
@@ -13,7 +13,7 @@ $(function () {
         'img/glasses40.svg', 'img/glasses40.svg',
         'img/fishing2.svg', 'img/fishing2.svg',
         'img/palm-tree.svg', 'img/palm-tree.svg',
-        'img/shirt9.svg', 'img/shirt9.svg'
+        'img/shirt9.svg', 'img/shirt9.svg'*/
         ]
         // to compare tile values
     var temp_values = [];
@@ -79,10 +79,8 @@ $(function () {
                     temp_values.length = 0;
                     // end game condition
                     if (tiles_flipped === tile_values.length) {
-                        alert("You win");
                         setTimeout(function () {
-                            $("#board").empty();
-                            newBoard();
+                            $("#dialog").dialog();
                         }, 1000)
                     }
                 } else {
@@ -100,6 +98,10 @@ $(function () {
 
     }); // end of on click
 
+    $("button").on("click", function () {
+        console.log("clicked");
+        newBoard();
+    });
 }); // end of JQuery function
 
 
