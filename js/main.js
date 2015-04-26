@@ -3,8 +3,8 @@ $(function () {
     // to store tile values
     var tile_values = [
         "img/bicycle28.svg", 'img/bicycle28.svg',
-        'img/flower11.svg', 'img/flower11.svg'
-/*        'img/sharks.svg', 'img/sharks.svg',
+        'img/flower11.svg', 'img/flower11.svg',
+        'img/sharks.svg', 'img/sharks.svg',
         'img/umbrellas4.svg', 'img/umbrellas4.svg',
         'img/houses2.svg', 'img/houses2.svg',
         'img/drink151.svg', 'img/drink151.svg',
@@ -12,8 +12,8 @@ $(function () {
         'img/star43.svg', 'img/star43.svg',
         'img/glasses40.svg', 'img/glasses40.svg',
         'img/fishing2.svg', 'img/fishing2.svg',
-        'img/palm-tree.svg', 'img/palm-tree.svg',
-        'img/shirt9.svg', 'img/shirt9.svg'*/
+        'img/helms.svg', 'img/helms.svg',
+        'img/shirt9.svg', 'img/shirt9.svg'
         ]
         // to compare tile values
     var temp_values = [];
@@ -61,7 +61,7 @@ $(function () {
     newBoard();
 
     // check if tiles match using a temporary array
-    $(".tile").on("click", function () {
+    $("#board").on("click", ".tile", function () {
         console.log("clicked");
         // if tile hasn't been clicked already
         if (temp_values.length < 2 && !$(this).hasClass("transform")) {
